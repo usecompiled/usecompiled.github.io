@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>su -c&#39;gedit /xxx/xxxx&#39; | 茂林修竹</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="标题命令：    以root权限打开文档 。   去掉目录W，去掉文件W：可以强制修改自己的文件，不能强制修改其他人在此目录下的文件，自己不能在此目录下创建新文件。   去掉目录W，保留文件W：可以修改文件，修改后文件的创建用户ID不改变。 保留目录W，去掉文件W：可以强制写文件，写文件后创建用户I改变为当前用户。 所以禁止目录W属性应该是禁止修改该目录的信息，（创建新文件会修改目录项的信息），">
+<meta property="og:type" content="article">
+<meta property="og:title" content="su -c&#39;gedit &#x2F;xxx&#x2F;xxxx&#39;">
+<meta property="og:url" content="http://git.1314933.com/2018/02/22/su-cgedit-xxx-xxxx/index.html">
+<meta property="og:site_name" content="茂林修竹">
+<meta property="og:description" content="标题命令：    以root权限打开文档 。   去掉目录W，去掉文件W：可以强制修改自己的文件，不能强制修改其他人在此目录下的文件，自己不能在此目录下创建新文件。   去掉目录W，保留文件W：可以修改文件，修改后文件的创建用户ID不改变。 保留目录W，去掉文件W：可以强制写文件，写文件后创建用户I改变为当前用户。 所以禁止目录W属性应该是禁止修改该目录的信息，（创建新文件会修改目录项的信息），">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-12-27T09:16:55.267Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="su -c&#39;gedit &#x2F;xxx&#x2F;xxxx&#39;">
+<meta name="twitter:description" content="标题命令：    以root权限打开文档 。   去掉目录W，去掉文件W：可以强制修改自己的文件，不能强制修改其他人在此目录下的文件，自己不能在此目录下创建新文件。   去掉目录W，保留文件W：可以修改文件，修改后文件的创建用户ID不改变。 保留目录W，去掉文件W：可以强制写文件，写文件后创建用户I改变为当前用户。 所以禁止目录W属性应该是禁止修改该目录的信息，（创建新文件会修改目录项的信息），">
+  
+    <link rel="alternate" href="/atom.xml" title="茂林修竹" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">茂林修竹</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Learn_notes.</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://git.1314933.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-su-cgedit-xxx-xxxx" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/22/su-cgedit-xxx-xxxx/" class="article-date">
+  <time datetime="2018-02-22T12:02:42.000Z" itemprop="datePublished">2018-02-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>►<a class="article-category-link" href="/categories/Linux/Ubuntu/">Ubuntu</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      su -c&#39;gedit /xxx/xxxx&#39;
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p> 标题命令：<br>    以root权限打开文档 。  </p>
+<p>去掉目录W，去掉文件W：可以强制修改自己的文件，不能强制修改其他人在此目录下的文件，自己不能在此目录下创建新文件。  </p>
+<p>去掉目录W，保留文件W：可以修改文件，修改后文件的创建用户ID不改变。</p>
+<p>保留目录W，去掉文件W：可以强制写文件，写文件后创建用户I改变为当前用户。</p>
+<p>所以禁止目录W属性应该是禁止修改该目录的信息，（创建新文件会修改目录项的信息），强制写文件在文件不在自己所有时要调用chown,调用chown需要对目录的信息进行修改（通过stat可以看到目录的最后更改时间变了），对目录没有写权限时会禁止该动作。如果文件是自己的则不需要调用chown,所以可以成功修改。  </p>
+<p> 命令：# dnf clean all   </p>
+<p><strong>删除缓存的无用软件包  
+</strong>用处：在使用 DNF 的过程中，会因为各种原因在系统中残留各种过时的文件和未完成的编译工程。我们可以使用该命令来删除这些没用的垃圾文件。  </p>
+<p><strong> 升级所有系统软件包  
+</strong><br>命令：# dnf update 或 # dnf upgrade  </p>
+<p>用处：该命令用于升级系统中所有有可用升级的软件包</p>
+<p>fedora dnf命令行新手指导：<br><a href="http://www.linuxstory.org/dnf-commands-for-fedora-rpm-package-management/" target="_blank" rel="noopener">http://www.linuxstory.org/dnf-commands-for-fedora-rpm-package-management/</a>  </p>
+<p>ubuntu交流网站：<br><a href="http://forum.ubuntu.org.cn/index.php" target="_blank" rel="noopener">http://forum.ubuntu.org.cn/index.php </a>;</p>
+<p>linux下修改文件夹及子文件夹和文件的权限（fedora 15） </p>
+<p>(一个正常的程序员是不会 777 的) </p>
+<p>$    sudo chmod -R 600 ××× （只有所有者有读和写的权限）</p>
+<p>$    sudo chmod -R 644 ××× （所有者有读和写的权限，组用户只有读的权限）</p>
+<p>$    sudo chmod -R 700 ××× （只有所有者有读和写以及执行的权限）</p>
+<p>$    sudo chmod -R 666 ××× （每个人都有读和写的权限）</p>
+<p>$    sudo chmod -R 777 ××× （每个人都有读和写以及执行的权限）  （读、写、运行三项权限可以用数字表示，就是r=4,w=2,x=1。所以，上面的例子中的rw-r–r–用数字表示成644。</p>
+<p>反过来说777就是rwx-rwx-rwx，意思是该登录用户（可以用命令id查看）、他所在的组和其他人都有最高权限。）</p>
+<p>0 [000] 无任何权限</p>
+<p>4 [100] 只读权限</p>
+<p>6 [110] 读写权限</p>
+<p>7 [111] 读写执行权限</p>
+<p>递归修改文件夹及其子文件夹的权限: 修改文件夹权限时用-R参数-R, –recursive   /<em> change files and directories recursively</em>/</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://git.1314933.com/2018/02/22/su-cgedit-xxx-xxxx/" data-id="cjq6easqd006o7wvn1i2yi2z9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/02/26/wordpress-e5-ad-97-e4-bd-93-e5-9b-be-e7-89-87-e5-8f-98-e6-88-90-e6-96-b9-e5-9d-97-ef-bc-9f-ef-bc-9f-ef-bc-9f/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          wordpress字体图片变成方块？？？
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/02/15/531/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Git常用命令2</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CentOS/">CentOS</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CentOS/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CentOS/云计算-大数据/">云计算/大数据</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/Ubuntu/">Ubuntu</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/OBS/">OBS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/java/Mybatis/">Mybatis</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/jsp/">jsp</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/基础/">基础</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/jsp/">jsp</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/书/">书</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/云计算-大数据/">云计算/大数据</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/未分类/">未分类</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/游戏/">游戏</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活-amp-日常/">生活&amp;日常</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/生活-amp-日常/网站日常/">网站日常</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/网站日常/">网站日常</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/网页设计/">网页设计</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/">设计模式</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design-pattern/">Design pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hbase/">Hbase</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hello-world/">Hello world</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mybatis/">Mybatis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Win10/">Win10</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Zookeeper/">Zookeeper</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/githubpages/">githubpages</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hadoop/">hadoop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jsp/">jsp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oracle/">oracle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/">test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vmware/">vmware</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress/">wordpress</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/云/">云</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/虚拟机/">虚拟机</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Design-pattern/" style="font-size: 10px;">Design pattern</a> <a href="/tags/Hbase/" style="font-size: 20px;">Hbase</a> <a href="/tags/Hello-world/" style="font-size: 10px;">Hello world</a> <a href="/tags/Mybatis/" style="font-size: 10px;">Mybatis</a> <a href="/tags/Win10/" style="font-size: 10px;">Win10</a> <a href="/tags/Zookeeper/" style="font-size: 15px;">Zookeeper</a> <a href="/tags/githubpages/" style="font-size: 10px;">githubpages</a> <a href="/tags/hadoop/" style="font-size: 15px;">hadoop</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/jsp/" style="font-size: 10px;">jsp</a> <a href="/tags/oracle/" style="font-size: 10px;">oracle</a> <a href="/tags/test/" style="font-size: 10px;">test</a> <a href="/tags/vmware/" style="font-size: 10px;">vmware</a> <a href="/tags/wordpress/" style="font-size: 10px;">wordpress</a> <a href="/tags/云/" style="font-size: 10px;">云</a> <a href="/tags/虚拟机/" style="font-size: 10px;">虚拟机</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/12/27/TEST-PUSH/">TEST PUSH</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/27/Setting-up-a-custom-subdomain-for-your-github-page/">Setting up a custom subdomain for your github page</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/26/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/12/e3-80-8a-e8-82-89-e8-92-b2-e5-9b-a2-e3-80-8b-e4-b9-a6-e6-91-98/">《肉蒲团》书摘</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/10/737/">737</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Usecompiled<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
